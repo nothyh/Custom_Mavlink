@@ -7,7 +7,8 @@
 
     <enums>
         <enum name="MAV_USER_COMPONENT">
-            <description>Cmponent ids (values) for the different types and instances of onboard hardware/software that might make up a MAVLink system.</description>
+            <description>Cmponent ids (values) for the different types and instances of onboard
+                hardware/software that might make up a MAVLink system.</description>
             <entry value="25" name="MAV_COMP_ID_SPEAKER">
                 <description>SPEAKER #1.</description>
             </entry>
@@ -139,19 +140,19 @@
 
         <enum name="MAV_TK_IMAGE_FLIP">
             <description>Indicate the image flip status</description>
-             <entry value="0" name="TK_HORIZONTAL_CLOCKWISE">
-            <description>Horizontal clockwise flip</description>
+            <entry value="0" name="TK_HORIZONTAL_CLOCKWISE">
+                <description>Horizontal clockwise flip</description>
             </entry>
             <entry value="1" name="TK_HORIZONTAL_COUNTER_CLOCKWISE">
-            <description>Horizontal counter-clockwise flip</description>
+                <description>Horizontal counter-clockwise flip</description>
             </entry>
             <entry value="2" name="TK_VERTICAL_CLOCKWISE">
-            <description>Vertical clockwise flip</description>
+                <description>Vertical clockwise flip</description>
             </entry>
             <entry value="3" name="TK_VERTICAL_COUNTER_CLOCKWISE">
-            <description>Vertical counter-clockwise flip</description>
+                <description>Vertical counter-clockwise flip</description>
             </entry>
-         </enum>   
+        </enum>
 
         <enum name="MAV_TK_TEMPERATURE_FLAG">
             <description>Indicate the infrared temperature measurement flag</description>
@@ -160,8 +161,8 @@
             </entry>
             <entry value="2" name="TK_TEMP_MEASUREMENT_LEVEL">
                 <description>Infrared temperature measurement level</description>
-            </entry>         
-        </enum>  
+            </entry>
+        </enum>
 
         <enum name="MAV_TK_TEMPERATURE_LEVEL">
             <description>Indicate the infrared temperature measurement level</description>
@@ -177,31 +178,31 @@
             <entry value="3" name="TK_TEMP_LEVEL_4">
                 <description>Level 4</description>
             </entry>
-        </enum>  
+        </enum>
 
-        <enum name = "MAV_TK_LASER_RANGE_FINDER">
+        <enum name="MAV_TK_LASER_RANGE_FINDER">
             <description>Indicate the laser range finder flag</description>
             <entry value="0" name="TK_SINGLE_DISTANCE_MEASUREMENT">
-            <description>Single distance measurement</description>
+                <description>Single distance measurement</description>
             </entry>
             <entry value="1" name="TK_CONTINUOUS_DISTANCE_MEASUREMENT">
-            <description>Continuous distance measurement</description>
+                <description>Continuous distance measurement</description>
             </entry>
             <entry value="2" name="TK_STOP_MEASUREMENT">
-            <description>Stop distance measurement</description>
+                <description>Stop distance measurement</description>
             </entry>
         </enum>
 
         <enum name="FILL_LIGHT_FLAG">
             <description>Status control</description>
             <entry value="1" name="TK_FILL_LIGHT_STATUS">
-            <description>Status setting</description>
+                <description>Status setting</description>
             </entry>
             <entry value="2" name="TK_FILL_LIGHT_BRIGHTNESS">
-            <description>Brightness setting</description>
+                <description>Brightness setting</description>
             </entry>
             <entry value="4" name="TK_FILL_LIGHT_SPOT">
-            <description>Light spot control</description>
+                <description>Light spot control</description>
             </entry>
         </enum>
 
@@ -235,18 +236,22 @@
 
 
         <enum name="MAV_CMD">
-        <!-- Custom specific MAV_CMD_* commands -->
-            <entry value="50000" name="MAV_CMD_SPEAKER_START_PLAY_AUDIO" hasLocation="false" isDestination="false">
+            <!-- Custom specific MAV_CMD_* commands -->
+            <entry value="50000" name="MAV_CMD_SPEAKER_START_PLAY_AUDIO" hasLocation="false"
+                isDestination="false">
                 <description>Start play audio.</description>
-                <param index="1" label="Play audio Mode" enum="SPEAKER_PLAY_AUDIO_MODE">Play audio mode</param>
-                <param index="2" label="Audio index" minValue="0" increment="1">Storage ID (1 for first, 2 for second, etc.)</param>
-                <param index="3" reserved="true" default="0"/>
-                <param index="4" reserved="true" default="0"/>
-                <param index="5" reserved="true" default="0"/>
-                <param index="6" reserved="true" default="0"/>
-                <param index="7" reserved="true" default="0"/>
+                <param index="1" label="Play audio Mode" enum="SPEAKER_PLAY_AUDIO_MODE">Play audio
+                    mode</param>
+                <param index="2" label="Audio index" minValue="0" increment="1">Storage ID (1 for
+                    first, 2 for second, etc.)</param>
+                <param index="3" reserved="true" default="0" />
+                <param index="4" reserved="true" default="0" />
+                <param index="5" reserved="true" default="0" />
+                <param index="6" reserved="true" default="0" />
+                <param index="7" reserved="true" default="0" />
             </entry>
-            <entry value="50001" name="MAV_CMD_SPEAKER_STOP_PLAY_AUDIO" hasLocation="false" isDestination="false">
+            <entry value="50001" name="MAV_CMD_SPEAKER_STOP_PLAY_AUDIO" hasLocation="false"
+                isDestination="false">
                 <description>Stop play audio.</description>
                 <param index="1">Empty</param>
                 <param index="2">Empty</param>
@@ -256,9 +261,11 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50002" name="MAV_CMD_SPEAKER_NOTIFY_AUDIO_FILE_UPDATE" hasLocation="false" isDestination="false">
+            <entry value="50002" name="MAV_CMD_SPEAKER_NOTIFY_AUDIO_FILE_UPDATE" hasLocation="false"
+                isDestination="false">
                 <description>Notify audio file updated.</description>
-                <param index="1" label="Update audio file type" enum="SPEAKER_UPDATE_AUDIO_FILE_TYPE">Update audio file type</param>
+                <param index="1" label="Update audio file type"
+                    enum="SPEAKER_UPDATE_AUDIO_FILE_TYPE">Update audio file type</param>
                 <param index="2">Empty</param>
                 <param index="3">Empty</param>
                 <param index="4">Empty</param>
@@ -266,7 +273,8 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50003" name="MAV_CMD_SPEAKER_REQUEST_STATUS" hasLocation="false" isDestination="false">
+            <entry value="50003" name="MAV_CMD_SPEAKER_REQUEST_STATUS" hasLocation="false"
+                isDestination="false">
                 <description>Request speaker status.</description>
                 <param index="1">Empty</param>
                 <param index="2">Empty</param>
@@ -276,9 +284,11 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50005" name="MAV_CMD_SPEAKER_SET_VOLUME" hasLocation="false" isDestination="false">
+            <entry value="50005" name="MAV_CMD_SPEAKER_SET_VOLUME" hasLocation="false"
+                isDestination="false">
                 <description>Set volume.</description>
-                <param index="1" label="Volume" minValue="0" increment="1">Volume level(in persentage)</param>
+                <param index="1" label="Volume" minValue="0" increment="1">Volume level(in
+                    persentage)</param>
                 <param index="2">Empty</param>
                 <param index="3">Empty</param>
                 <param index="4">Empty</param>
@@ -286,7 +296,8 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50006" name="MAV_CMD_SPEAKER_REQUEST_INFORMATION" hasLocation="false" isDestination="false">
+            <entry value="50006" name="MAV_CMD_SPEAKER_REQUEST_INFORMATION" hasLocation="false"
+                isDestination="false">
                 <description>Request speaker infomation.</description>
                 <param index="1">Empty</param>
                 <param index="2">Empty</param>
@@ -296,7 +307,8 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50007" name="MAV_CMD_SPEAKER_REQUEST_STORAGE_INFORMATION" hasLocation="false" isDestination="false">
+            <entry value="50007" name="MAV_CMD_SPEAKER_REQUEST_STORAGE_INFORMATION"
+                hasLocation="false" isDestination="false">
                 <description>Request speaker storage infomation.</description>
                 <param index="1">Empty</param>
                 <param index="2">Empty</param>
@@ -306,9 +318,11 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50008" name="MAV_CMD_SPEAKER_FORMAT_STORAGE" hasLocation="false" isDestination="false">
+            <entry value="50008" name="MAV_CMD_SPEAKER_FORMAT_STORAGE" hasLocation="false"
+                isDestination="false">
                 <description>Format storage.</description>
-                <param index="1" label="Storage ID" minValue="0" increment="1">Storage ID (0 for all, 1 for first, 2 for second, etc.)</param>
+                <param index="1" label="Storage ID" minValue="0" increment="1">Storage ID (0 for
+                    all, 1 for first, 2 for second, etc.)</param>
                 <param index="2">Empty</param>
                 <param index="3">Empty</param>
                 <param index="4">Empty</param>
@@ -316,7 +330,8 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50009" name="MAV_CMD_SPEAKER_UPDATE_FIRMWARE" hasLocation="false" isDestination="false">
+            <entry value="50009" name="MAV_CMD_SPEAKER_UPDATE_FIRMWARE" hasLocation="false"
+                isDestination="false">
                 <description>Update speaker firmware.</description>
                 <param index="1">Empty</param>
                 <param index="2">Empty</param>
@@ -326,7 +341,8 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50010" name="MAV_CMD_SPEAKER_RESTART" hasLocation="false" isDestination="false">
+            <entry value="50010" name="MAV_CMD_SPEAKER_RESTART" hasLocation="false"
+                isDestination="false">
                 <description>Restart speaker.</description>
                 <param index="1">Empty</param>
                 <param index="2">Empty</param>
@@ -336,19 +352,27 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50011" name="MAV_CMD_SPEAKER_SET_ANGLE" hasLocation="false" isDestination="false">
+            <entry value="50011" name="MAV_CMD_SPEAKER_SET_ANGLE" hasLocation="false"
+                isDestination="false">
                 <description>Set speaker pitch.</description>
-                <param index="1" label="Roll" units="deg" minValue="-180" maxValue="180">Roll angle (of surface). Range: -180..180 degrees. NAN or 0 means value not set. 0.01 indicates zero roll.</param>
-                <param index="2" label="Pitch" units="deg" minValue="-90" maxValue="90">Pitch angle (of surface). Range: -90..90 degrees. NAN or 0 means value not set. 0.01 means zero pitch.</param>
-                <param index="3" label="Yaw" units="deg" minValue="-180" maxValue="180">Yaw angle. NaN to use default heading. Range: -180..180 degrees.</param>
+                <param index="1" label="Roll" units="deg" minValue="-180" maxValue="180">Roll angle
+                    (of surface). Range: -180..180 degrees. NAN or 0 means value not set. 0.01
+                    indicates zero roll.</param>
+                <param index="2" label="Pitch" units="deg" minValue="-90" maxValue="90">Pitch angle
+                    (of surface). Range: -90..90 degrees. NAN or 0 means value not set. 0.01 means
+                    zero pitch.</param>
+                <param index="3" label="Yaw" units="deg" minValue="-180" maxValue="180">Yaw angle.
+                    NaN to use default heading. Range: -180..180 degrees.</param>
                 <param index="4">Empty</param>
                 <param index="5">Empty</param>
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50012" name="MAV_CMD_SPEAKER_SET_LIGHT_MODE" hasLocation="false" isDestination="false">
+            <entry value="50012" name="MAV_CMD_SPEAKER_SET_LIGHT_MODE" hasLocation="false"
+                isDestination="false">
                 <description>Set speaker light mode.</description>
-                <param index="1" label="Pitch set value" enum="SPEAKER_LIGHT_MODE">Positive valuce is up, negative value is down, 0 value is center.</param>
+                <param index="1" label="Pitch set value" enum="SPEAKER_LIGHT_MODE">Positive valuce
+                    is up, negative value is down, 0 value is center.</param>
                 <param index="2">Empty</param>
                 <param index="3">Empty</param>
                 <param index="4">Empty</param>
@@ -356,7 +380,8 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50013" name="MAV_CMD_SPEAKER_SET_LIGHT_ON_OFF" hasLocation="false" isDestination="false">
+            <entry value="50013" name="MAV_CMD_SPEAKER_SET_LIGHT_ON_OFF" hasLocation="false"
+                isDestination="false">
                 <description>Set speaker light on/off.</description>
                 <param index="1" label="Light on/off" enum="SPEAKER_LIGHT_ON_OFF">0 is off, 1 is on.</param>
                 <param index="2">Empty</param>
@@ -366,9 +391,11 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50014" name="MAV_CMD_SPEAKER_FOLLOW_GIMBAL" hasLocation="false" isDestination="false">
+            <entry value="50014" name="MAV_CMD_SPEAKER_FOLLOW_GIMBAL" hasLocation="false"
+                isDestination="false">
                 <description>Set speaker follow the gimbal.</description>
-                <param index="1" label="Follow the gimbal" minValue="0" maxValue="1" increment="1">0: no, 1: yes</param>
+                <param index="1" label="Follow the gimbal" minValue="0" maxValue="1" increment="1">0:
+                    no, 1: yes</param>
                 <param index="2">Empty</param>
                 <param index="3">Empty</param>
                 <param index="4">Empty</param>
@@ -376,19 +403,23 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50015" name="MAV_CMD_SPEAKER_MULTI_CONNECTION_OPERATION" hasLocation="false" isDestination="false">
+            <entry value="50015" name="MAV_CMD_SPEAKER_MULTI_CONNECTION_OPERATION"
+                hasLocation="false" isDestination="false">
                 <description>Multi connection operation.</description>
                 <param index="1" label="Connection id" increment="1">Connection id.</param>
                 <param index="2" label="Connection id" increment="1">Connection id.</param>
                 <param index="3" label="Connection id" increment="1">Connection id.</param>
                 <param index="4" label="Connection id" increment="1">Connection id.</param>
                 <param index="5" label="Connection index" increment="1">Connection index.</param>
-                <param index="6" label="Operation type" enum = "SPEAKER_MULTI_CONNECTION_OPERATION_TYPE">Operation type.</param>
+                <param index="6" label="Operation type"
+                    enum="SPEAKER_MULTI_CONNECTION_OPERATION_TYPE">Operation type.</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50016" name="MAV_CMD_SPEAKER_APPLY_FILE_OPERATION_PERMISSION" hasLocation="false" isDestination="false">
+            <entry value="50016" name="MAV_CMD_SPEAKER_APPLY_FILE_OPERATION_PERMISSION"
+                hasLocation="false" isDestination="false">
                 <description>File operation permission.</description>
-                <param index="1" label="Permission want" enum="SPEAKER_FILE_OPERATION_PERMISSION">0 is release, 1 is get.</param>
+                <param index="1" label="Permission want" enum="SPEAKER_FILE_OPERATION_PERMISSION">0
+                    is release, 1 is get.</param>
                 <param index="2">Empty</param>
                 <param index="3">Empty</param>
                 <param index="4">Empty</param>
@@ -397,9 +428,11 @@
                 <param index="7">Empty</param>
             </entry>
 
-            <entry value="50017" name="MAV_CMD_NOTIFY_FILE_UPDATE" hasLocation="false" isDestination="false">
+            <entry value="50017" name="MAV_CMD_NOTIFY_FILE_UPDATE" hasLocation="false"
+                isDestination="false">
                 <description>Notify audio file updated.</description>
-                <param index="1" label="Update audio file type" enum="SPEAKER_UPDATE_AUDIO_FILE_TYPE">Update audio file type</param>
+                <param index="1" label="Update audio file type"
+                    enum="SPEAKER_UPDATE_AUDIO_FILE_TYPE">Update audio file type</param>
                 <param index="2">Empty</param>
                 <param index="3">Empty</param>
                 <param index="4">Empty</param>
@@ -408,7 +441,8 @@
                 <param index="7">Empty</param>
             </entry>
 
-             <entry value="50030" name="MAV_CMD_SKYLINK_REQUEST_INFORMATION" hasLocation="false" isDestination="false">
+            <entry value="50030" name="MAV_CMD_SKYLINK_REQUEST_INFORMATION" hasLocation="false"
+                isDestination="false">
                 <description>Request skylink infomation.</description>
                 <param index="1">Empty</param>
                 <param index="2">Empty</param>
@@ -418,7 +452,8 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50031" name="MAV_CMD_SKYLINK_UPDATE_FIRMWARE" hasLocation="false" isDestination="false">
+            <entry value="50031" name="MAV_CMD_SKYLINK_UPDATE_FIRMWARE" hasLocation="false"
+                isDestination="false">
                 <description>Update skylink firmware.</description>
                 <param index="1">Empty</param>
                 <param index="2">Empty</param>
@@ -428,7 +463,8 @@
                 <param index="6">Empty</param>
                 <param index="7">Empty</param>
             </entry>
-            <entry value="50032" name="MAV_CMD_SKYLINK_RESTART" hasLocation="false" isDestination="false">
+            <entry value="50032" name="MAV_CMD_SKYLINK_RESTART" hasLocation="false"
+                isDestination="false">
                 <description>Restart skylink.</description>
                 <param index="1">Empty</param>
                 <param index="2">Empty</param>
@@ -441,25 +477,25 @@
 
             <!-- 51000~51299 is gimbal-->
 
-             <entry value="51031" name="MAV_CMD_TK_ENTER_UPGRADE_MODE">
+            <entry value="51031" name="MAV_CMD_TK_ENTER_UPGRADE_MODE">
                 <description>Enter upgrade mode</description>
-                <param index="1">Empty</param>   
-            </entry> 
+                <param index="1">Empty</param>
+            </entry>
 
             <entry value="51032" name="MAV_CMD_TK_EXIT_UPGRADE_MODE">
                 <description>Exit upgrade mode</description>
                 <param index="1">Empty</param>
-            </entry>  
+            </entry>
 
             <!-- 51200~51399 is Motor-->
 
-        
+
             <!-- 51400~51599 is camera-->
- 
+
             <entry value="51400" name="MAV_CMD_TK_CAMERA_CHANGE_PIP">
                 <description>Change camera PIP</description>
-                <param index="1" label="PIP mode" enum = "PIP_MODE">PIP mode</param>
-            </entry> 
+                <param index="1" label="PIP mode" enum="PIP_MODE">PIP mode</param>
+            </entry>
 
             <entry value="51401" name="MAV_CMD_TK_CAMERA_CHANGE_PSEUDO_COLOR">
                 <description>Change camera pseudo color</description>
@@ -468,59 +504,80 @@
 
             <entry value="51402" name="MAV_CMD_TK_CAMERA_OSD">
                 <description>Set camera OSD</description>
-                <param index="1" label="osd status" enum = "MAV_TK_STATUS">osd status</param>
+                <param index="1" label="osd status" enum="MAV_TK_STATUS">osd status</param>
             </entry>
 
 
             <entry value="51403" name="MAV_CMD_TK_CAMERA_IMAGE_FLIP">
                 <description>Set camera flip</description>
-                <param index="1" label="flip status" enum = "MAV_TK_IMAGE_FLIP">flip status</param>
+                <param index="1" label="flip status" enum="MAV_TK_IMAGE_FLIP">flip status</param>
             </entry>
 
             <entry value="51404" name="MAV_CMD_TK_CAMERA_ELECTRONIC_ZOOM">
                 <description>Set camera electronic zoom</description>
-                <param index="1" label="zoom status" enum = "MAV_TK_STATUS">zoom status</param>
+                <param index="1" label="zoom status" enum="MAV_TK_STATUS">zoom status</param>
             </entry>
 
             <entry value="51405" name="MAV_CMD_TK_CAMERA_ELECTRONIC_STABILIZATION">
                 <description>Set camera electronic stabilization</description>
-                <param index="1" label="stabilization status" enum = "MAV_TK_STATUS">camera electronic stabilization status</param>
+                <param index="1" label="stabilization status" enum="MAV_TK_STATUS">camera electronic
+                    stabilization status</param>
             </entry>
 
             <entry value="51406" name="MAV_CMD_TK_CAMERA_INFRARED_TEMPERATURE">
                 <description>Infrared temperature measurement</description>
                 <param index="1" label="flag" enum="MAV_TK_TEMPERATURE_FLAG"></param>
-                <param index="2" label="Temperature status" enum="MAV_TK_STATUS">Infrared temperature measurement status</param>
-                <param index="3" label="Level" enum = "MAV_TK_TEMPERATURE_LEVEL">Temperature measurement level</param>
+                <param index="2" label="Temperature status" enum="MAV_TK_STATUS">Infrared
+                    temperature measurement status</param>
+                <param index="3" label="Level" enum="MAV_TK_TEMPERATURE_LEVEL">Temperature
+                    measurement level</param>
             </entry>
 
             <entry value="51407" name="MAV_CMD_TK_LASER_INDICATOR_LIGHT">
                 <description>Laser indicator light</description>
-                <param index="1" label="Laser indicator light status" enum="MAV_TK_STATUS">Laser indicator light status</param>
+                <param index="1" label="Laser indicator light status" enum="MAV_TK_STATUS">Laser
+                    indicator light status</param>
             </entry>
 
             <entry value="51408" name="MAV_CMD_TK_LASER_RANGE_FINDER">
                 <description>Laser range finder</description>
-                <param index="1" label="Laser range finder flag" enum="MAV_TK_LASER_RANGE_FINDER">Laser range finder flag</param>
+                <param index="1" label="Laser range finder flag" enum="MAV_TK_LASER_RANGE_FINDER">Laser
+                    range finder flag</param>
             </entry>
 
             <entry value="51409" name="MAV_CMD_TK_HUMAN_VEHICLE_DETECTION">
                 <description>Human and vehicle detection</description>
-                <param index="1" label="Detection status" enum="MAV_TK_STATUS">Human and vehicle detection status</param>
+                <param index="1" label="Detection status" enum="MAV_TK_STATUS">Human and vehicle
+                    detection status</param>
             </entry>
 
             <entry value="51410" name="MAV_CMD_TK_FILL_LIGHT_CONTROL">
                 <description>Fill light control</description>
                 <param index="1" label="flag" enum="FILL_LIGHT_FLAG">Fill light control flag</param>
                 <param index="2" label="Light status">Fill light status</param>
-                <param index="3" label="Brightness" minValue = "0" maxValue = "255">Fill light brightness  minValue = "0" maxValue = "255" </param>
-                <param index="4" label="Light spot" minValue = "0" maxValue = "180">Fill light spot size minValue = "0" maxValue = "180"</param>
+                <param index="3" label="Brightness" minValue="0" maxValue="255">Fill light
+                    brightness minValue = "0" maxValue = "255" </param>
+                <param index="4" label="Light spot" minValue="0" maxValue="180">Fill light spot size
+                    minValue = "0" maxValue = "180"</param>
             </entry>
 
             <entry value="51411" name="MAV_CMD_CAMREA_PARAM_SAVE">
                 <description>Save camera parameters</description>
                 <param index="1">Empty</param>
             </entry>
+
+            <entry value="51413" name="MAV_CMD_ENTER_DEV_MODE">
+                <description>Enter developer mode</description>
+                <param index="1" label="Password-label">password</param>
+                <param index="2" reserved="true" default="0" />
+                <param index="3" reserved="true" default="0" />
+                <param index="4" reserved="true" default="0" />
+                <param index="5" reserved="true" default="0" />
+                <param index="6" reserved="true" default="0" />
+                <param index="7" reserved="true" default="0" />
+            </entry>
+
+
         </enum>
     </enums>
 
@@ -535,19 +592,22 @@
         <message id="20001" name="SPEAKER_STATUS">
             <description>Information of audio file.</description>
             <field type="uint8_t" name="play_mode" enum="SPEAKER_PLAY_AUDIO_MODE">Play audio mode.</field>
-            <field type="uint8_t" name="play_status" enum="SPEAKER_PLAY_AUDIO_STATUS">Whether audio playing is currently in process.</field>
-            <field type="float" name="playing_time_s">Elapsed time since starting the audio playing (in seconds).</field>
+            <field type="uint8_t" name="play_status" enum="SPEAKER_PLAY_AUDIO_STATUS">Whether audio
+                playing is currently in process.</field>
+            <field type="float" name="playing_time_s">Elapsed time since starting the audio playing
+                (in seconds).</field>
             <field type="float" name="current_volume">Current volume level (in persentage).</field>
             <field type="int32_t" name="network_module_status">Current network status.</field>
             <field type="float" name="roll">Value of speaker roll.</field>
             <field type="float" name="pitch">Value of speaker pitch.</field>
             <field type="float" name="yaw">Value of speaker yaw.</field>
             <field type="uint8_t" name="light_mode" enum="SPEAKER_LIGHT_MODE">Mode of speaker light.</field>
-            <field type="uint8_t" name="light_on_off" enum="SPEAKER_LIGHT_ON_OFF">On/off of speaker light.</field>
+            <field type="uint8_t" name="light_on_off" enum="SPEAKER_LIGHT_ON_OFF">On/off of speaker
+                light.</field>
         </message>
         <message id="20002" name="SPEAKER_STORAGE_INFORMATION">
             <description>Information about the speaker storage.</description>
-            <field type="uint8_t" name="storage_status"  enum="STORAGE_STATUS">Status of storage.</field>
+            <field type="uint8_t" name="storage_status" enum="STORAGE_STATUS">Status of storage.</field>
             <field type="uint8_t" name="storage_type" enum="STORAGE_TYPE">Storage type.</field>
             <field type="float" name="total_storage" units="MiB">Total storage (in MiB).</field>
             <field type="float" name="used_storage" units="MiB">Used storage (in MiB).</field>
@@ -561,13 +621,15 @@
         <message id="20004" name="SPEAKER_AUDIO_INFO">
             <description>Information of audio file.</description>
             <field type="char[64]" name="name">The name of audio file.</field>
-            <field type="uint32_t" name="index">Zero-based index of this audio since vehicle was armed.</field>
+            <field type="uint32_t" name="index">Zero-based index of this audio since vehicle was
+                armed.</field>
             <field type="char[16]" name="format">The format of audio file.</field>
             <field type="float" name="length">The length of audio, (in seconds).</field>
         </message>
         <message id="20005" name="SPEAKER_CONNECTION_STATUS">
             <description>Status of connection.</description>
-            <field type="uint8_t" name="operation_ack" enum="SPEAKER_MULTI_CONNECTION_OPERATION_TYPE">Connection operation type.</field>
+            <field type="uint8_t" name="operation_ack"
+                enum="SPEAKER_MULTI_CONNECTION_OPERATION_TYPE">Connection operation type.</field>
             <field type="uint8_t" name="connection_amount">The connection amount.</field>
             <field type="uint8_t" name="connection_index">The connection index.</field>
             <field type="uint64_t" name="connection_id">The connection id.</field>
@@ -592,7 +654,8 @@
         <message id="20021" name="SKYLINK_FILE_INFORMATION">
             <description>Information of audio file.</description>
             <field type="char[64]" name="name">The name of audio file.</field>
-            <field type="uint32_t" name="index">Zero-based index of this audio since vehicle was armed.</field>
+            <field type="uint32_t" name="index">Zero-based index of this audio since vehicle was
+                armed.</field>
         </message>
 
 
@@ -602,6 +665,7 @@
             <field type="uint8_t" name="len">Data length.</field>
             <field type="char[252]" name="data">Custom data area.</field>
         </message>
+
 
     </messages>
 
